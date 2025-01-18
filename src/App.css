@@ -1,0 +1,63 @@
+#html,
+body {
+  margin: 0;
+  padding: 1em;
+  /* width: 100vw; */
+  font-family: "Press Start 2P", serif;
+  max-width: 100vw;
+}
+
+#contenedor {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 1em;
+  box-shadow: 3px 3px 3px 3px teal;
+}
+
+#contenedor,
+#izquierda,
+#derecha,
+.gutter {
+  height: calc(100vh - 10em);
+}
+
+#izquierda,
+#derecha,
+.gutter {
+  float: left;
+  position: relative;
+  overflow: hidden;
+  background-color: azure;
+  color: #242424;
+}
+
+#izquierda, #derecha{
+  border-radius: 1em;
+}
+
+#map-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: .5em;
+  border-radius: 1em;
+}
+
+#map-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: .5em;
+  
+}
+
+.gutter {
+  background-color: #eee;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+  cursor: col-resize;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==");
+}
