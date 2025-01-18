@@ -5,6 +5,7 @@ body {
   /* width: 100vw; */
   font-family: "Press Start 2P", serif;
   max-width: 100vw;
+  max-height: 100vh !important;
 }
 
 #contenedor {
@@ -40,24 +41,51 @@ body {
   left: 0;
   top: 0;
   padding: .5em;
-  border-radius: 1em;
+  border-radius: .1em;
 }
 
 #map-right {
   position: absolute;
   right: 0;
   top: 0;
-  padding: .5em;
+  padding: .1em;
   
 }
 
 .gutter {
-  background-color: #eee;
+  background-color: rgb(26, 144, 218);
   background-repeat: no-repeat;
   background-position: 50%;
+  border-radius: 2px;
 }
 
 .gutter.gutter-horizontal {
   cursor: col-resize;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==");
+  /* background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg=="); */
+}
+
+.elemento-select{
+  line-height: 1.1;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(215, 123, 31); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  /* margin: 0 auto; Gives that scrolling effect as the typing happens */
+  max-width: 20%;
+  letter-spacing: .15em; /* Adjust as needed */
+  color: rgb(26, 144, 218);
+  animation: 
+  typing 3.5s steps(40, end),
+  blink-menu .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 50% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-menu {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(26, 144, 218); }
 }
